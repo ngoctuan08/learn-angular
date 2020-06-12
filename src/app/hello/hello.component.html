@@ -1,0 +1,15 @@
+<h2>Hello there!</h2>
+<h3>Your name: {{ user.name }}</h3>
+<p>Your name: {{ user.age }}</p>
+<div *ngIf="user.age >= 30; else notAllow">
+  Bạn có thể xem phim này !
+</div>
+<ng-template #notAllow>
+  <div>
+    Bạn không đủ tuổi xem bộ phim này !
+  </div>
+</ng-template>
+<div *ngFor="let author of authors; index as idx; count as total">
+  {{ idx }} - {{ total }} - {{ author.name }} - {{ author.age }} -
+  {{ author.address }}
+</div>
